@@ -6,7 +6,7 @@ class Seats extends Component{
   render() {
     return (
       <div
-        className={this.props.value === null ? "square-red" : "square"}
+        className={this.props.value === null ? "square" : "square-red"}
         onClick={() => this.props.onClick()}>
 
       </div>

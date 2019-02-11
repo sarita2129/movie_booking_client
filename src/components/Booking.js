@@ -1,41 +1,50 @@
 import React, { Component } from 'react';
 import Seats from './Seats';
 import axios from 'axios';
-const SERVER_URL = 'http://localhost:3000/bookings.json';
+// const SERVER_URL = 'http://localhost:3000/bookings.json';
+// const SERVER_URL = 'http://localhost:3000/showbookings/6.json';
+// const SERVER_URL = 'http://localhost:3000/shows.json';
+ const SERVER_URL = 'http://localhost:3000/shows/';
 
 class Booking extends Component{
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
       seats: [],//Array(24).fill(null),
       data: []
     };
     this.handleClick = this.handleClick.bind(this);
     this.bookSeat = this.bookSeat.bind(this);
-
+    // console.log(SERVER_URL + this.props.match.params.show_id + '.json');
+    // console.log( this.props.match.params.show_id );
+//     axios.get('http://localhost:3000/showbookings/', {
+//          show_id: this.props.match.params.show_id
+// ,
+//   }).then((results) => {
+//          console.log({results})
     const fetchSeats = () => {
-      axios.get(SERVER_URL).then((results) => {
+      axios.get(SERVER_URL + this.props.match.params.show_id + '.json').then((results) => {
         // this.setState({secrets: results.data });
         // setTimeout(fetchSecrets,4000);
         let num = 0;
         let arr = Array(24).fill(null);
-        console.log(results.data);
+        console.log(results.data.bookings);
         // while(num <= 23)
         for(let j=0;j<=23;j++)
         {
               // arr = results.data.map( (b) => console.log(b.seat )//=== num ? b.seat : null
 
-                        for(let i=0;i<=results.data.length-1;i++)
+                        for(let i=0;i<=results.data.bookings.length-1;i++)
                         {
-                          if(results.data[i].seat === j)
+                          if(results.data.bookings[i].seat === j)
                           // arr.push(results.data[i].seat)
-                          arr[j] = results.data[i].seat;
+                          arr[j] = results.data.bookings[i].seat;
                         }
 
         // num++;
         }
         this.setState({data: arr });
-        console.log(this.state.data);
+        // console.log(this.state.data);
         setTimeout(fetchSeats,4000);
       });
 
@@ -47,9 +56,9 @@ class Booking extends Component{
     let axiosArray = []
     for (let j=0;j<=this.state.seats.length-1;j++) {
       let postData = {}
-      postData['show_id'] = 6
-      postData['user_id'] = 1
-      postData['seat'] = this.state.seats[j]
+      postData['show_id'] = this.props.match.params.show_id;
+      postData['user_id'] = 1;
+      postData['seat'] = this.state.seats[j];
 
       let newPromise = axios({
           method: 'post',
@@ -58,7 +67,7 @@ class Booking extends Component{
         })
       axiosArray.push(newPromise)
     }
-    console.log(axiosArray);
+    // console.log(axiosArray);
     axios
     .all(axiosArray)
     .then(() => {
