@@ -1,35 +1,13 @@
 import React, { Component } from 'react';
-// import {browserHistory} from 'react-router';
-// import {browserHistory} from 'react-router';
-
 import { Link } from 'react-router-dom';
 
 class Nav extends Component{
-  constructor(props){
-    super(props);
+  constructor(){
+    super();
     this.state = {
-      city: "",
-      username: undefined,
-      user: undefined
-    };
-    this.updateCity = this.updateCity.bind(this);
-  }
-    componentDidMount () {
-    const token = window.localStorage.getItem('jwt');
-    let nv;
-    if (token) {
-      nv = jwtDecode(token);
+      city: ""
     }
-    if (nv) {
-
-      this.setState({user: `Welcome  ${nv.username}`});
-      // browserHistory.push('/home');
-    //  this.setState({isSignedIn: !!window.localStorage.getItem('jwt')});
-   }
-  }
-  signout(){
-    alert('signout');
-    // this.props.history.push('/home');
+    this.updateCity = this.updateCity.bind(this);
   }
   updateCity(city){
     this.setState({city:city});
@@ -43,34 +21,27 @@ class Nav extends Component{
         <div class="nav-wrapper">
           <a href="#" class="brand-logo">Reelsplex</a>
 
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
 
+              <li>
 
-<ul id="dropdown1" class="dropdown-content">
-<li><a href="#!">one</a></li>
-<li><a href="#!">two</a></li>
-<li class="divider"></li>
-<li><a href="#!">three</a></li>
-</ul>
-<nav>
-<div class="nav-wrapper">
-  <ul class="right hide-on-med-and-down">
-    <li><Link to='/home'>Home</Link></li>
-    <li><Link to= { '/movies/'+ this.state.city }>Movies</Link></li>
-    <li><Link to='/booking'>Booking</Link></li>
-
-    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
-  </ul>
-  <City onSelect={(v) => this.updateCity(v)}/>
-  <Link to='/login' onClick={this.state.user ? this.signout : null}>{this.state.user ? "Logout" : "Login"}</Link>
-
-  <p>{this.state.user} </p>
-</div>
-</nav>
-
-
+              <li><Link to='/home'>Home</Link></li>
+              <li><Link to= { '/movies/'+ this.state.city }>Movies</Link></li>
+              </li>
+            </ul>
+            <div class="seltag">
+            <select className="browser-default"onChange={this._handleChange}>
+              <option value="" disabled selected>Your Location</option>
+              <option value="Sydney">Sydney</option>
+              <option value="Melbourne">Melbourne</option>
+              <option value="Brisbane">Brisbane</option>
+              <option value="Darwin">Darwin</option>
+              <option value="Adelaide">Adelaide</option>
+            </select>
+            </div>
           </div>
-          </nav>
         </nav>
+      </nav>
 
 
     );

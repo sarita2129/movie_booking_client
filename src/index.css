@@ -64,4 +64,11 @@ box-sizing: border-box;
 
 .browser-default{
   margin-top: 0.6em;
+  border-radius: 100%;
+}
+.seltag {
+  position: absolute;
+  top: 5em;
+  width: 200px;
+  border-radius: 40px;
 }
