@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import City from './City';
 
 class Nav extends Component{
   constructor(){
@@ -16,12 +15,38 @@ class Nav extends Component{
   }
   render(){
     return(
-      <div>
-        <Link to='/home'>Home</Link>
-        <Link to= { '/movies/'+ this.state.city }>Movies</Link>
-        <Link to='/booking'>Booking</Link>
-        <City onSelect={(v) => this.updateCity(v)}/>
-      </div>
+      <nav>
+      <nav class="nav-extended">
+
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Reelsplex</a>
+
+
+
+<ul id="dropdown1" class="dropdown-content">
+<li><a href="#!">one</a></li>
+<li><a href="#!">two</a></li>
+<li class="divider"></li>
+<li><a href="#!">three</a></li>
+</ul>
+<nav>
+<div class="nav-wrapper">
+  <ul class="right hide-on-med-and-down">
+    <li><Link to='/home'>Home</Link></li>
+    <li><Link to= { '/movies/'+ this.state.city }>Movies</Link></li>
+    <li><Link to='/booking'>Booking</Link></li>
+
+    <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+  </ul>
+</div>
+</nav>
+
+
+          </div>
+          </nav>
+        </nav>
+
+
     );
   }
 }
