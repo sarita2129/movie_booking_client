@@ -41,7 +41,7 @@ class Movies extends Component{
            <Link to={"/movieinfo/"+movie.id + "/" + this.props.city} className="btn btn-light">
            <div key={movie.id} className="moviediv">
             <h2 key={'h1' + movie.id}>{movie.name}</h2>
-            <img src={movie.image} alt={movie.name} className="movieimg" key={'img' + movie.id}/>
+            <img src={'../../' + movie.image} alt={movie.name} className="movieimg" key={'img' + movie.id}/>
             </div>
             </Link>
             </div>
