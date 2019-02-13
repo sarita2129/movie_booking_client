@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './City.css';
 
 class City extends Component {
   constructor(props){
@@ -11,17 +12,14 @@ class City extends Component {
   }
   render(){
     return(
-      <div>
         <select onChange={this._handleChange}>
-          <option value=""></option>
+          <option value="" disabled selected></option>
           <option value="Sydney">Sydney</option>
           <option value="Melbourne">Melbourne</option>
           <option value="Brisbane">Brisbane</option>
           <option value="Darwin">Darwin</option>
           <option value="Adelaide">Adelaide</option>
-
         </select>
-      </div>
     );
   }
 }

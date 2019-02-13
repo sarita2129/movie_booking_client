@@ -14,7 +14,7 @@ class Home extends Component{
     return(
       <div>
 
-      
+
       </div>
     );
   }

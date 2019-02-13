@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Movies from './Movies';
+// import './City.css'
 
 class SelectCinema extends Component{
   constructor(props){

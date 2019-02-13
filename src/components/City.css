@@ -1,0 +1,14 @@
+.menu-bar {
+  top: 200px;
+  width: 50%;
+  height: 50%;
+  padding: 10px 15px;
+  border: 1px dashed blue;
+  border-radius: 4px;
+  background-color: orange;
+  z-index: 1;
+}
+
+nav .input-field label {
+  top: 30px;
+}

@@ -3,13 +3,10 @@ import React, { Component } from 'react';
 // import {browserHistory} from 'react-router';
 import $ from 'jquery';
 import { Link } from 'react-router-dom';
-import City from './City';
-import Login from './Login';
-import jwtDecode from 'jwt-decode';
 
 class Nav extends Component{
-  constructor(props){
-    super(props);
+  constructor(){
+    super();
     this.state = {
       city: "",
       username: undefined,
