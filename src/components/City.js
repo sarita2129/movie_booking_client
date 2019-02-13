@@ -12,7 +12,7 @@ class City extends Component {
   }
   render(){
     return(
-        <select onChange={this._handleChange}>
+        <select class="selc" onChange={this._handleChange}>
           <option value="" disabled selected></option>
           <option value="Sydney">Sydney</option>
           <option value="Melbourne">Melbourne</option>

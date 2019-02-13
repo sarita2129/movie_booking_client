@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {browserHistory} from 'react-router';
 import jwtDecode from 'jwt-decode';
+import './Login.css'
 
 class Login extends Component{
   constructor(props){
@@ -54,11 +55,25 @@ class Login extends Component{
  }
   render(){
     return(
-      <form onSubmit={this._handleSubmit}>
-        <input type="text" placeholder="UserName" ref={node => {this.inputNode1 = node}}/>
-        <input type="password" placeholder="password" ref={node => {this.inputNode2 = node}}/>
-        <button>Login</button>
-      </form>
+      <div class="wrapper fadeInDown">
+        <div id="formContent">
+
+          <div class="fadeIn first">
+          </div>
+
+          <form onSubmit={this._handleSubmit}>
+            <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" ref={node => {this.inputNode1 = node}}/>
+            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password" ref={node => {this.inputNode2 = node}}/>
+            <input type="submit" class="fadeIn fourth" value="Log In" />
+          </form>
+
+          <div id="formFooter">
+            <a class="underlineHover" href="#">Forgot Password?</a>
+          </div>
+
+        </div>
+      </div>
+
     );
   }
 }

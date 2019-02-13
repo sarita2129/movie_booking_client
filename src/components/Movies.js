@@ -37,10 +37,9 @@ class Movies extends Component{
     return(
       <div className="container">
            { this.state.movies.map( (movie) => <div key={movie.id + 'moviediv'} className="row d-inline-block">
-           <div className="col-3">
+           <div className="col-md-4">
            <Link to={"/movieinfo/"+movie.id + "/" + this.props.city} className="btn btn-light">
            <div key={movie.id} className="moviediv">
-            <h2 key={'h1' + movie.id}>{movie.name}</h2>
             <img src={'../../' + movie.image} alt={movie.name} className="movieimg" key={'img' + movie.id}/>
             </div>
             </Link>

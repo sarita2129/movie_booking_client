@@ -46,8 +46,8 @@ border-radius: 5px;
 box-sizing: border-box;
 }
 .movieimg{
-  width:200px;
-  height:200px;
+  width:250px;
+  height:250px;
   display:inline-block;
   position:relative;
   margin: 0 auto;
@@ -105,4 +105,9 @@ box-sizing: border-box;
   -webkit-box-shadow: 10px 10px 48px -5px rgba(0,0,0,0.47);
   -moz-box-shadow: 10px 10px 48px -5px rgba(0,0,0,0.47);
   box-shadow: 10px 10px 48px -5px rgba(0,0,0,0.47);
+}
+
+.h2 {
+  text-transform: uppercase!important;
+
 }
