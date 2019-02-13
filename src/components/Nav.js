@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import {browserHistory} from 'react-router';
 // import {browserHistory} from 'react-router';
-
+import $ from 'jquery';
 import { Link } from 'react-router-dom';
 import City from './City';
 import Login from './Login';
@@ -15,6 +15,9 @@ class Nav extends Component{
       username: undefined,
       user: undefined
     };
+    $('#myModal').on('shown.bs.modal', function () {
+       $('#myInput').trigger('focus')
+     })
     this.updateCity = this.updateCity.bind(this);
   }
     componentDidMount () {
@@ -29,6 +32,12 @@ class Nav extends Component{
       // browserHistory.push('/home');
     //  this.setState({isSignedIn: !!window.localStorage.getItem('jwt')});
    }
+   if(this.state.city === "")
+   {
+     $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+      })
+   }
   }
   signout(){
     alert('signout');
@@ -40,15 +49,51 @@ class Nav extends Component{
   }
   render(){
     return(
-      <div>
-        <Link to='/home'>Home</Link>
-        <Link to= { '/movies/'+ this.state.city }>Movies</Link>
-        <Link to='/booking'>Booking</Link>
-        <City onSelect={(v) => this.updateCity(v)}/>
-        <Link to='/login' onClick={this.state.user ? this.signout : null}>{this.state.user ? "Logout" : "Login"}</Link>
+      <nav className="navbar navbar-expand-lg navbar-light bg-dark navbarbg" >
 
-        <p>{this.state.user} </p>
-      </div>
+        <div className="collapse navbar-collapse" id="navbarText">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item active">
+              <Link to='/home' className="navbar-brand">Home</Link>
+            </li>
+            <li className="nav-item active">
+              <Link to={ '/movies/'+ (this.state.city === "" ? "all" : this.state.city) } className="navbar-brand">Movies</Link>
+            </li>
+
+            <li className="nav-item active">
+              <City onSelect={(v) => this.updateCity(v)} className="navbar-brand"/>
+            </li>
+
+          </ul>
+          <span className="navbar-text">
+
+            {this.state.user} |
+            <Link to='/login' onClick={this.state.user ? this.signout : null} className="navbar-brand">{this.state.user ? "Logout" : "Login"}</Link>
+
+          </span>
+
+          <div class="modal" tabindex="-1" role="dialog" id="myModal">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Modal body text goes here.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        </nav>
+
     );
   }
 }

@@ -1,10 +1,20 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
+
 
 class Home extends Component{
+  componentDidMount = () => {
+    // $('.carousel').carousel({
+    //       interval: 3000
+    //   });
+    //
+    //   $('.carousel').carousel('cycle');
+  }
   render(){
     return(
       <div>
-        <h1>This is a home page</h1>
+
+      
       </div>
     );
   }

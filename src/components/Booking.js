@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Seats from './Seats';
 import axios from 'axios';
-// const SERVER_URL = 'http://localhost:3000/bookings.json';
+import jwtDecode from 'jwt-decode';
+
+const SERVER_BOOKING_URL = 'http://localhost:3000/bookings.json';
 // const SERVER_URL = 'http://localhost:3000/showbookings/6.json';
 // const SERVER_URL = 'http://localhost:3000/shows.json';
  const SERVER_URL = 'http://localhost:3000/shows/';
@@ -11,10 +13,14 @@ class Booking extends Component{
     super(props);
     this.state = {
       seats: [],//Array(24).fill(null),
-      data: []
+      data: [],
+      user_id: ""
     };
     this.handleClick = this.handleClick.bind(this);
     this.bookSeat = this.bookSeat.bind(this);
+    this.componentDidMount = this.componentDidMount.bind(this);
+
+
     // console.log(SERVER_URL + this.props.match.params.show_id + '.json');
     // console.log( this.props.match.params.show_id );
 //     axios.get('http://localhost:3000/showbookings/', {
@@ -27,10 +33,10 @@ class Booking extends Component{
         // this.setState({secrets: results.data });
         // setTimeout(fetchSecrets,4000);
         let num = 0;
-        let arr = Array(24).fill(null);
+        let arr = Array(48).fill(null);
         console.log(results.data.bookings);
         // while(num <= 23)
-        for(let j=0;j<=23;j++)
+        for(let j=0;j<=arr.length-1;j++)
         {
               // arr = results.data.map( (b) => console.log(b.seat )//=== num ? b.seat : null
 
@@ -51,18 +57,33 @@ class Booking extends Component{
     };
     fetchSeats();
   }
+  componentDidMount(){
+  const token = window.localStorage.getItem('jwt');
+  let nv;
+  if (token) {
+    nv = jwtDecode(token);
+  }
+  if (nv) {
+
+    this.setState({user_id: nv.id});
+    // browserHistory.push('/home');
+  //  this.setState({isSignedIn: !!window.localStorage.getItem('jwt')});
+ }
+ console.log("user_id " + nv.id);
+};
   bookSeat(){
     alert('1');
+    this.componentDidMount();
     let axiosArray = []
     for (let j=0;j<=this.state.seats.length-1;j++) {
       let postData = {}
       postData['show_id'] = this.props.match.params.show_id;
-      postData['user_id'] = 1;
+      postData['user_id'] = this.state.user_id;
       postData['seat'] = this.state.seats[j];
 
       let newPromise = axios({
           method: 'post',
-          url: SERVER_URL,
+          url: SERVER_BOOKING_URL,
           data: postData
         })
       axiosArray.push(newPromise)
@@ -122,19 +143,23 @@ class Booking extends Component{
 
   render(){
     return(
-      <div>
+      <div className="container">
           Please select your seat:
           <br />
-
+          Infront of the cinema
+        <div className="board-row screen">
+          <div className="col-10"></div>
+        </div>
+        <div class="col-4">
         <div className="board-row">
 
-          {this.renderSeats(0,this.state.data[0])}
-          {this.renderSeats(1,this.state.data[1])}
-          {this.renderSeats(2,this.state.data[2])}
+            {this.renderSeats(0,this.state.data[0])}
+            {this.renderSeats(1,this.state.data[1])}
+            {this.renderSeats(2,this.state.data[2])}
 
-          {this.renderSeats(3,this.state.data[3])}
-          {this.renderSeats(4,this.state.data[4])}
-          {this.renderSeats(5,this.state.data[5])}
+            {this.renderSeats(3,this.state.data[3])}
+            {this.renderSeats(4,this.state.data[4])}
+            {this.renderSeats(5,this.state.data[5])}
         </div>
         <div className="board-row">
           {this.renderSeats(6,this.state.data[6])}
@@ -164,6 +189,52 @@ class Booking extends Component{
           {this.renderSeats(22,this.state.data[22])}
           {this.renderSeats(23,this.state.data[23])}
 
+        </div>
+        </div>
+
+
+
+
+        <div class="col-4">
+        <div className="board-row">
+
+            {this.renderSeats(24,this.state.data[24])}
+            {this.renderSeats(25,this.state.data[25])}
+            {this.renderSeats(26,this.state.data[26])}
+
+            {this.renderSeats(27,this.state.data[27])}
+            {this.renderSeats(28,this.state.data[28])}
+            {this.renderSeats(29,this.state.data[29])}
+        </div>
+        <div className="board-row">
+          {this.renderSeats(30,this.state.data[30])}
+          {this.renderSeats(31,this.state.data[31])}
+          {this.renderSeats(32,this.state.data[32])}
+
+          {this.renderSeats(33,this.state.data[33])}
+          {this.renderSeats(34,this.state.data[34])}
+          {this.renderSeats(35,this.state.data[35])}
+        </div>
+        <div className="board-row">
+          {this.renderSeats(36,this.state.data[36])}
+          {this.renderSeats(37,this.state.data[37])}
+          {this.renderSeats(38,this.state.data[38])}
+
+          {this.renderSeats(39,this.state.data[39])}
+          {this.renderSeats(40,this.state.data[40])}
+          {this.renderSeats(41,this.state.data[41])}
+
+        </div>
+        <div className="board-row">
+          {this.renderSeats(42,this.state.data[42])}
+          {this.renderSeats(43,this.state.data[43])}
+          {this.renderSeats(44,this.state.data[44])}
+
+          {this.renderSeats(45,this.state.data[45])}
+          {this.renderSeats(46,this.state.data[46])}
+          {this.renderSeats(47,this.state.data[47])}
+
+        </div>
         </div>
         <input type="submit" value="Book" onClick={this.bookSeat} />
       </div>
