@@ -35,7 +35,7 @@ class Login extends Component{
            this.setState({username: this.inputNode1.value}),
            window.localStorage.setItem('jwt', res.jwt))
          // ).then(() => browserHistory.push('/home'))
-       ).then(() => this.props.history.push('/home'))
+       ).then(() => this.props.history.push('/'))
 
        // )
          .catch(function(error) {
