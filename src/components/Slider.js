@@ -12,7 +12,7 @@ class Slider extends Component{
     this._handleCarousel = this._handleCarousel.bind(this);
     setInterval(() => {
       this._handleCarousel()
-    },1000)
+    },5000)
   }
   componentDidMount = () => {
     // setInterval(() => {
@@ -39,9 +39,9 @@ class Slider extends Component{
 
       <div id="carouselExampleInterval" className="carousel slide" data-ride="carousel" >
       <ol className="carousel-indicators">
-        <li data-target="#carouselExampleInterval" data-slide-to="0" className="active" onClick={this._handleCarousel}></li>
-        <li data-target="#carouselExampleInterval" data-slide-to="1"  onClick={this._handleCarousel}></li>
-        <li data-target="#carouselExampleInterval" data-slide-to="2"  onClick={this._handleCarousel}></li>
+        <li data-target="#carouselExampleInterval" data-slide-to="0" className={this.state.index === 0 ? " active" : ""} onClick={this._handleCarousel}></li>
+        <li data-target="#carouselExampleInterval" data-slide-to="1" className={this.state.index === 1 ? " active" : ""} onClick={this._handleCarousel}></li>
+        <li data-target="#carouselExampleInterval" data-slide-to="2" className={this.state.index === 2 ? " active" : ""} onClick={this._handleCarousel}></li>
       </ol>
         <div className="carousel-inner">
           <div className={"carousel-item" + (this.state.index === 0 ? " active" : "")} data-interval="10000">

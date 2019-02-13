@@ -27,9 +27,10 @@ class Nav extends Component{
     if (token) {
       nv = jwtDecode(token);
     }
+    // console.log(nv)
     if (nv) {
 
-      this.setState({user: `Welcome  ${nv.username}`});
+      this.setState({user: `Welcome,  ${nv.username}`});
       // browserHistory.push('/home');
     //  this.setState({isSignedIn: !!window.localStorage.getItem('jwt')});
    }
@@ -41,11 +42,14 @@ class Nav extends Component{
    }
   }
   signout(){
-    alert('signout');
+    // alert('signout');
+    localStorage.clear();
+    window.location.href = '/';
     // this.props.history.push('/home');
   }
   updateCity(city){
     this.setState({city:city});
+
     // alert(this.state.city);
   }
   render(){
@@ -68,27 +72,30 @@ class Nav extends Component{
           </ul>
           <span className="navbar-text">
 
+<<<<<<< HEAD
           <img style={{width: '30px', height: '30px'}} src="../../images/user.png" />
-          {this.state.user}
+          {this.state.user ? this.state.user + '|' : null}
+=======
+>>>>>>> 4d5248414e3ff574a95aa1bea7683e8b0b6d9092
             <Link to='/login' onClick={this.state.user ? this.signout : null} className="navbar-brand">{this.state.user ? "Logout" : "Login"}</Link>
 
           </span>
 
-          <div class="modal" tabindex="-1" role="dialog" id="myModal">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <div className="modal" tabindex="-1" role="dialog" id="myModal">
+          <div className="modal-dialog" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title">Modal title</h5>
+                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="modal-body">
+              <div className="modal-body">
                 <p>Modal body text goes here.</p>
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Save changes</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-primary">Save changes</button>
+                <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
