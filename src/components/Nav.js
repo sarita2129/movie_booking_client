@@ -72,13 +72,9 @@ class Nav extends Component{
           </ul>
           <span className="navbar-text">
 
-<<<<<<< HEAD
           <img style={{width: '30px', height: '30px'}} src="../../images/user.png" />
           {this.state.user ? this.state.user + '|' : null}
-=======
->>>>>>> 4d5248414e3ff574a95aa1bea7683e8b0b6d9092
             <Link to='/login' onClick={this.state.user ? this.signout : null} className="navbar-brand">{this.state.user ? "Logout" : "Login"}</Link>
-
           </span>
 
           <div className="modal" tabindex="-1" role="dialog" id="myModal">
