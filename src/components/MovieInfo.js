@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-const SERVER_MOVIE_URL = 'http://localhost:3000/movies/';
+const SERVER_MOVIE_URL = 'https://moviebookingserver.herokuapp.com/movies/';
 // const SERVER_SHOW_URL = 'http://localhost:3000/shows.json';
 // const SERVER_SHOW_URL = 'http://localhost:3000/showsbycity/';
 

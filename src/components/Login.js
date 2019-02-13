@@ -29,7 +29,7 @@ class Login extends Component{
     var formData = new FormData();
     formData.append("username",this.inputNode1.value);
     formData.append("password",this.inputNode2.value);
-    fetch("http://localhost:3000/tokens",
+    fetch("https://moviebookingserver.herokuapp.com/tokens",
          { method: 'POST',body: formData})
         .then(res => res.json()).then(res => (console.log(res.jwt),
            this.setState({username: this.inputNode1.value}),

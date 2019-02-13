@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-const SERVER_SHOW_URL = 'http://localhost:3000/showsbycity/';
+const SERVER_SHOW_URL = 'https://moviebookingserver.herokuapp.com/showsbycity/';
 
 class Cinema extends Component{
   constructor(props){

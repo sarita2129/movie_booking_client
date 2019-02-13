@@ -3,10 +3,10 @@ import Seats from './Seats';
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 
-const SERVER_BOOKING_URL = 'http://localhost:3000/bookings.json';
+const SERVER_BOOKING_URL = 'https://moviebookingserver.herokuapp.com/bookings.json';
 // const SERVER_URL = 'http://localhost:3000/showbookings/6.json';
 // const SERVER_URL = 'http://localhost:3000/shows.json';
- const SERVER_URL = 'http://localhost:3000/shows/';
+ const SERVER_URL = 'https://moviebookingserver.herokuapp.com/shows/';
 
 class Booking extends Component{
   constructor(props){
