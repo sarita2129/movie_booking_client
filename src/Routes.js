@@ -29,7 +29,6 @@ const Routes = (
       <Route exact path="/login" component={ Login } />
       <Route path="/movieinfo/:movie/:city" component={ MovieInfo } />
       <Route path="/cinemas/:city" component={ Cinema } />
-
       <Footer />
 
     </div>
