@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-const SERVER_MOVIE_FILTER_URL = 'http://localhost:3000/getmoviesbycity/';
-const SERVER_MOVIE_ALL_URL = 'http://localhost:3000/movies.json';
+const SERVER_MOVIE_FILTER_URL = 'https://moviebookingserver.herokuapp.com/getmoviesbycity/';
+const SERVER_MOVIE_ALL_URL = 'https://moviebookingserver.herokuapp.com/movies.json';
 // const SERVER_SHOW_URL = 'http://localhost:3000/shows.json';
-const SERVER_SHOW_URL = 'http://localhost:3000/showsbycity/';
+const SERVER_SHOW_URL = 'https://moviebookingserver.herokuapp.com/showsbycity/';
 
 class Movies extends Component{
   constructor(props){
