@@ -2,7 +2,7 @@
   "name": "movie_booking_client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sarita2129.github.io/reelsplex",
+  "homepage": "https://sarita2129.github.io/movie_booking_client",
   "dependencies": {
     "axios": "^0.18.0",
     "jquery": "^3.3.1",
