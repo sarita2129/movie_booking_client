@@ -45,13 +45,13 @@ class Slider extends Component{
       </ol>
         <div className="carousel-inner">
           <div className={"carousel-item" + (this.state.index === 0 ? " active" : "")} data-interval="10000">
-            <img src="../../images/banner1.jpg" className="d-block w-100" alt="banner1" />
+            <img src="images/banner1.jpg" className="d-block w-100" alt="banner1" />
           </div>
           <div className={"carousel-item" + (this.state.index === 1 ? " active" : "")} data-interval="2000">
-            <img src="../../images/banner-2.jpg" className="d-block w-100" alt="banner2" />
+            <img src="images/banner-2.jpg" className="d-block w-100" alt="banner2" />
           </div>
           <div className={"carousel-item" + (this.state.index === 2 ? " active" : "")}>
-            <img src="../../images/banner3.jpg" className="d-block w-100" alt="banner3" />
+            <img src="images/banner3.jpg" className="d-block w-100" alt="banner3" />
           </div>
         </div>
         <a className="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev"  >

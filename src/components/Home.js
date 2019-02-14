@@ -19,7 +19,7 @@ class Home extends Component{
                 <div class="row">
                   <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
-                      <img class="card-img-top" src="../images/Collete.jpg" data-holder-rendered="true" />
+                      <img class="card-img-top" src="images/Collete.jpg" data-holder-rendered="true" />
                         <div class="card-body">
                           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             <div class="d-flex justify-content-between align-items-center">
@@ -32,7 +32,7 @@ class Home extends Component{
                     </div>
                       <div class="col-md-4">
                         <div class="card mb-4 box-shadow">
-                          <img class="card-img-top" src="../images/Alita.jpg" data-holder-rendered="true" />
+                          <img class="card-img-top" src="images/Alita.jpg" data-holder-rendered="true" />
                             <div class="card-body">
                               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                 <div class="d-flex justify-content-between align-items-center">
@@ -45,7 +45,7 @@ class Home extends Component{
                       </div>
                       <div class="col-md-4">
                         <div class="card mb-4 box-shadow">
-                          <img class="card-img-top" src="../images/TheFavorite.jpg" data-holder-rendered="true" />
+                          <img class="card-img-top" src="images/TheFavorite.jpg" data-holder-rendered="true" />
                             <div class="card-body">
                               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                 <div class="d-flex justify-content-between align-items-center">
@@ -59,7 +59,7 @@ class Home extends Component{
 
                         <div class="col-md-4">
                           <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" src="../images/Frontrunner.jpg" data-holder-rendered="true" />
+                            <img class="card-img-top" src="images/Frontrunner.jpg" data-holder-rendered="true" />
                               <div class="card-body">
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                   <div class="d-flex justify-content-between align-items-center">
@@ -72,7 +72,7 @@ class Home extends Component{
                           </div>
                           <div class="col-md-4">
                             <div class="card mb-4 box-shadow">
-                              <img class="card-img-top" src="../images/Bohemian.jpg" data-holder-rendered="true" />
+                              <img class="card-img-top" src="images/Bohemian.jpg" data-holder-rendered="true" />
                                 <div class="card-body">
                                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                     <div class="d-flex justify-content-between align-items-center">
@@ -85,7 +85,7 @@ class Home extends Component{
                             </div>
                             <div class="col-md-4">
                               <div class="card mb-4 box-shadow">
-                                <img class="card-img-top" src="../images/Bumblebee.jpg" data-holder-rendered="true" />
+                                <img class="card-img-top" src="images/Bumblebee.jpg" data-holder-rendered="true" />
                                   <div class="card-body">
                                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                       <div class="d-flex justify-content-between align-items-center">

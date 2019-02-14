@@ -55,7 +55,7 @@ class Nav extends Component{
   render(){
     return(
       <nav className="navbar navbar-expand-lg navbar-light bg-dark navbarbg" >
-          <img style={{width: '200px', height: '100px'}} src="../../images/logo.png" />
+          <img style={{width: '200px', height: '100px'}} src="images/logo.png" />
         <div className="collapse navbar-collapse" id="navbarText">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
@@ -72,7 +72,7 @@ class Nav extends Component{
           </ul>
           <span className="navbar-text">
 
-          <img style={{width: '30px', height: '30px'}} src="../../images/user.png" />
+          <img style={{width: '30px', height: '30px'}} src="images/user.png" />
           {this.state.user ? this.state.user + '|' : null}
             <Link to='/login' onClick={this.state.user ? this.signout : null} className="navbar-brand">{this.state.user ? "Logout" : "Login"}</Link>
           </span>

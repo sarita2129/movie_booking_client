@@ -12,7 +12,7 @@ class Footer extends Component{
            <div class="row">
               <div class="col-md-6 ">
                  <div class="logo-part">
-                    <img style={{width: '200px', height: '100px'}} src="../../images/logo.png"/>
+                    <img style={{width: '200px', height: '100px'}} src="images/logo.png"/>
                  </div>
               </div>
               <div class="col-md-6 px-4">
@@ -42,10 +42,10 @@ class Footer extends Component{
               <div class="col-md-6 ">
                  <h6> Newsletter</h6>
                  <div class="social">
-                    <a href="#"><img style={{width: '50px', height: '50px'}} src="../../images/facebook.png" /></a>
-                    <a href="#"><img style={{width: '40px', height: '40px'}} src="../../images/instagram.png" /></a>
-                    <a href="#"><img style={{width: '40px', height: '40px'}} src="../../images/googleplus.png" /></a>
-                    <a href="#"><img style={{width: '40px', height: '40px'}} src="../../images/twitter.png" /></a>
+                    <a href="#"><img style={{width: '50px', height: '50px'}} src="images/facebook.png" /></a>
+                    <a href="#"><img style={{width: '40px', height: '40px'}} src="images/instagram.png" /></a>
+                    <a href="#"><img style={{width: '40px', height: '40px'}} src="images/googleplus.png" /></a>
+                    <a href="#"><img style={{width: '40px', height: '40px'}} src="images/twitter.png" /></a>
 
                  </div>
                  <form class="form-footer my-3">
