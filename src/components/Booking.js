@@ -86,13 +86,14 @@ class Booking extends Component{
 };
   bookSeat(){
     this.componentDidMount();
-    let axiosArray = []
+    let axiosArray = [];
+    let seattext = '';
     for (let j=0;j<=this.state.seats.length-1;j++) {
       let postData = {}
       postData['show_id'] = this.props.match.params.show_id;
       postData['user_id'] = this.state.user_id;
       postData['seat'] = this.state.seats[j];
-
+      seattext += this.state.seats[j] + (j === this.state.seats.length-1 ? ' ': ', ');
       let newPromise = axios({
           method: 'post',
           url: SERVER_BOOKING_URL,
@@ -104,7 +105,7 @@ class Booking extends Component{
     axios
     .all(axiosArray)
     .then(() => {
-      this.setState({message: "Seats booked Succesfully."})
+      this.setState({message: "Seats " + seattext + "booked Succesfully."})
     // console.log('submitted all axios calls')
     })
     // .then(axios.spread((...axiosArray) => {
