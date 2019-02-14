@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "6e979dd492580ebe718e",
+    "revision": "acd21f50184e1ce15241",
     "url": "/movie_booking_client/static/css/main.1430cce8.chunk.css"
   },
   {
-    "revision": "6e979dd492580ebe718e",
-    "url": "/movie_booking_client/static/js/main.6e979dd4.chunk.js"
+    "revision": "acd21f50184e1ce15241",
+    "url": "/movie_booking_client/static/js/main.acd21f50.chunk.js"
   },
   {
     "revision": "9684e9438da7ced04a7d",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/movie_booking_client/static/js/runtime~main.2482b572.js"
   },
   {
-    "revision": "1d10c0268fd29fd281f1b40737322ceb",
+    "revision": "de6e691f345ae30c38c662c4455012e9",
     "url": "/movie_booking_client/index.html"
   }
 ];

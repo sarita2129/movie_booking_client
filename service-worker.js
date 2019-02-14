@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/movie_booking_client/precache-manifest.7d77c8ed665e21aa951d9fdc44f0ae00.js"
+  "/movie_booking_client/precache-manifest.a25768f4492d38b2857d62ee91a5d082.js"
 );
 
 workbox.clientsClaim();
