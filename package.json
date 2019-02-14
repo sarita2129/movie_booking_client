@@ -2,6 +2,7 @@
   "name": "movie_booking_client",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sarita2129.github.io/reelsplex",
   "dependencies": {
     "axios": "^0.18.0",
     "jquery": "^3.3.1",
@@ -17,6 +18,8 @@
     "redux": "^4.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -30,5 +33,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
 }
