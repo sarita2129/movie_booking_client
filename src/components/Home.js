@@ -14,6 +14,7 @@ class Home extends Component{
     return(
       <div>
       <div class="album py-5 bg-light">
+      
               <div class="container">
                 <h1>Coming Soon</h1>
                 <div class="row">
