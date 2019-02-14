@@ -1,13 +1,13 @@
 {
-  "main.css": "/movie_booking_client/static/css/main.81f4a5d4.chunk.css",
-  "main.js": "/movie_booking_client/static/js/main.d6939965.chunk.js",
-  "main.js.map": "/movie_booking_client/static/js/main.d6939965.chunk.js.map",
+  "main.css": "/movie_booking_client/static/css/main.03a3bb09.chunk.css",
+  "main.js": "/movie_booking_client/static/js/main.23969806.chunk.js",
+  "main.js.map": "/movie_booking_client/static/js/main.23969806.chunk.js.map",
   "static/js/1.9684e943.chunk.js": "/movie_booking_client/static/js/1.9684e943.chunk.js",
   "static/js/1.9684e943.chunk.js.map": "/movie_booking_client/static/js/1.9684e943.chunk.js.map",
   "runtime~main.js": "/movie_booking_client/static/js/runtime~main.2482b572.js",
   "runtime~main.js.map": "/movie_booking_client/static/js/runtime~main.2482b572.js.map",
-  "static/css/main.81f4a5d4.chunk.css.map": "/movie_booking_client/static/css/main.81f4a5d4.chunk.css.map",
+  "static/css/main.03a3bb09.chunk.css.map": "/movie_booking_client/static/css/main.03a3bb09.chunk.css.map",
   "index.html": "/movie_booking_client/index.html",
-  "precache-manifest.ca612f2856966d622ef3dcc1839ee400.js": "/movie_booking_client/precache-manifest.ca612f2856966d622ef3dcc1839ee400.js",
+  "precache-manifest.4c3c4471f568b5bd6e2594097a95b5b9.js": "/movie_booking_client/precache-manifest.4c3c4471f568b5bd6e2594097a95b5b9.js",
   "service-worker.js": "/movie_booking_client/service-worker.js"
 }
