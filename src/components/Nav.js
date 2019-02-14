@@ -44,7 +44,7 @@ class Nav extends Component{
   signout(){
     // alert('signout');
     localStorage.clear();
-    window.location.href = '/';
+    window.location.href = '/home';
     // this.props.history.push('/home');
   }
   updateCity(city){

@@ -36,7 +36,7 @@ class Login extends Component{
            this.setState({username: this.inputNode1.value}),
            window.localStorage.setItem('jwt', res.jwt))
          // ).then(() => browserHistory.push('/home'))
-       ).then(() => this.props.history.push('/'))
+       ).then(() => this.props.history.push('/home'))
 
        // )
          .catch(function(error) {
@@ -63,7 +63,7 @@ class Login extends Component{
 
           <form onSubmit={this._handleSubmit}>
             <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" ref={node => {this.inputNode1 = node}}/>
-            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password" ref={node => {this.inputNode2 = node}}/>
+            <input type="password" id="password" class="fadeIn third passwordinput" name="login" placeholder="password" ref={node => {this.inputNode2 = node}}/>
             <input type="submit" class="fadeIn fourth" value="Log In" />
           </form>
 
