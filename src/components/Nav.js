@@ -44,7 +44,8 @@ class Nav extends Component{
   signout(){
     // alert('signout');
     localStorage.clear();
-    window.location.href = '/home';
+    window.location.hash = 'home';
+    window.location.reload();
     // this.props.history.push('/home');
   }
   updateCity(city){
@@ -71,10 +72,11 @@ class Nav extends Component{
 
           </ul>
           <span className="navbar-text">
+            <img style={{width: '30px', height: '30px'}} src="images/user.png" />
+            {this.state.user ? this.state.user + '|' : null}
 
-          <img style={{width: '30px', height: '30px'}} src="images/user.png" />
-          {this.state.user ? this.state.user + '|' : null}
-            <Link to='/login' onClick={this.state.user ? this.signout : null} className="navbar-brand">{this.state.user ? "Logout" : "Login"}</Link>
+            {this.state.user ? <a href="#" onClick={this.signout} className="navbar-brand">Logout</a> : <Link to='/login' className="navbar-brand">Login</Link>}
+
           </span>
 
           <div className="modal" tabindex="-1" role="dialog" id="myModal">
