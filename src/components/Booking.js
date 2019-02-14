@@ -48,6 +48,17 @@ class Booking extends Component{
                           // arr.push(results.data[i].seat)
                           arr[j] = results.data.bookings[i].seat;
                         }
+                        if(this.state.seats != null && this.state.seats.length > 0)
+                        {
+                          // alert(this.state.seats);
+                          for(let k=0;k<=this.state.seats.length-1;k++)
+                          {
+                            if(this.state.seats[k] === j)
+                            // arr.push(results.data[i].seat)
+                            arr[j] = this.state.seats[k];
+                          }
+                        }
+
 
         // num++;
         }
