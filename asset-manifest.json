@@ -1,13 +1,13 @@
 {
-  "main.css": "/reelsplex/static/css/main.4092d0fa.chunk.css",
-  "main.js": "/reelsplex/static/js/main.d0cec2d7.chunk.js",
-  "main.js.map": "/reelsplex/static/js/main.d0cec2d7.chunk.js.map",
-  "static/js/1.9684e943.chunk.js": "/reelsplex/static/js/1.9684e943.chunk.js",
-  "static/js/1.9684e943.chunk.js.map": "/reelsplex/static/js/1.9684e943.chunk.js.map",
-  "runtime~main.js": "/reelsplex/static/js/runtime~main.95aee502.js",
-  "runtime~main.js.map": "/reelsplex/static/js/runtime~main.95aee502.js.map",
-  "static/css/main.4092d0fa.chunk.css.map": "/reelsplex/static/css/main.4092d0fa.chunk.css.map",
-  "index.html": "/reelsplex/index.html",
-  "precache-manifest.8ccc64944f716463d9d233092b77cae8.js": "/reelsplex/precache-manifest.8ccc64944f716463d9d233092b77cae8.js",
-  "service-worker.js": "/reelsplex/service-worker.js"
+  "main.css": "/movie_booking_client/static/css/main.4092d0fa.chunk.css",
+  "main.js": "/movie_booking_client/static/js/main.b9589807.chunk.js",
+  "main.js.map": "/movie_booking_client/static/js/main.b9589807.chunk.js.map",
+  "static/js/1.9684e943.chunk.js": "/movie_booking_client/static/js/1.9684e943.chunk.js",
+  "static/js/1.9684e943.chunk.js.map": "/movie_booking_client/static/js/1.9684e943.chunk.js.map",
+  "runtime~main.js": "/movie_booking_client/static/js/runtime~main.2482b572.js",
+  "runtime~main.js.map": "/movie_booking_client/static/js/runtime~main.2482b572.js.map",
+  "static/css/main.4092d0fa.chunk.css.map": "/movie_booking_client/static/css/main.4092d0fa.chunk.css.map",
+  "index.html": "/movie_booking_client/index.html",
+  "precache-manifest.e86fe75164c4fa55cb86acad15b2a02d.js": "/movie_booking_client/precache-manifest.e86fe75164c4fa55cb86acad15b2a02d.js",
+  "service-worker.js": "/movie_booking_client/service-worker.js"
 }
