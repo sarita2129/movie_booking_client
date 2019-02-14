@@ -170,14 +170,15 @@ class Booking extends Component{
   render(){
     return(
       <div className="container">
-      <div className="board-row screen">
-        <div className="col-10 center">Infront of the cinema</div>
+      <div className="board-row screen center">
+        Infront of the cinema
       </div>
-        <div className="row">
-          <div className="col-4 seatdiv">
+        <div className="row divcenter">
+          <div className="col-8 offset-md-2">
               <div className="row">
-                  <div className="col-10 offset-md-3">
-                        <div className="square">A</div>
+                  <div className="col-6">
+                    <div className="row">
+                        <div className="cinemarowtext">A</div>
                         {this.renderSeats(0,this.state.data[0])}
                         {this.renderSeats(1,this.state.data[1])}
                         {this.renderSeats(2,this.state.data[2])}
@@ -186,105 +187,95 @@ class Booking extends Component{
                          {this.renderSeats(4,this.state.data[4])}
                          {this.renderSeats(5,this.state.data[5])}
                    </div>
-               </div>
-               <div className="row">
-                   <div className="col-10 offset-md-3">
-                         <div className="square">B</div>
-                         {this.renderSeats(6,this.state.data[6])}
-                         {this.renderSeats(7,this.state.data[7])}
-                         {this.renderSeats(8,this.state.data[8])}
+                   <div className="row">
+                       <div className="cinemarowtext">B</div>
+                       {this.renderSeats(6,this.state.data[6])}
+                       {this.renderSeats(7,this.state.data[7])}
+                       {this.renderSeats(8,this.state.data[8])}
 
-                         {this.renderSeats(9,this.state.data[9])}
-                         {this.renderSeats(10,this.state.data[10])}
-                         {this.renderSeats(11,this.state.data[11])}
+                       {this.renderSeats(9,this.state.data[9])}
+                       {this.renderSeats(10,this.state.data[10])}
+                       {this.renderSeats(11,this.state.data[11])}
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col-10 offset-md-3">
-                          <div className="square">C</div>
-                          {this.renderSeats(12,this.state.data[12])}
-                          {this.renderSeats(13,this.state.data[13])}
-                          {this.renderSeats(14,this.state.data[14])}
+                  <div className="row">
+                        <div className="cinemarowtext">C</div>
+                        {this.renderSeats(12,this.state.data[12])}
+                        {this.renderSeats(13,this.state.data[13])}
+                        {this.renderSeats(14,this.state.data[14])}
 
-                          {this.renderSeats(15,this.state.data[15])}
-                          {this.renderSeats(16,this.state.data[16])}
-                          {this.renderSeats(17,this.state.data[17])}
-                     </div>
-                 </div>
-                 <div className="row">
-                     <div className="col-10 offset-md-3">
-                           <div className="square">D</div>
-                           {this.renderSeats(18,this.state.data[18])}
-                           {this.renderSeats(19,this.state.data[19])}
-                           {this.renderSeats(20,this.state.data[20])}
+                        {this.renderSeats(15,this.state.data[15])}
+                        {this.renderSeats(16,this.state.data[16])}
+                        {this.renderSeats(17,this.state.data[17])}
+                   </div>
+                   <div className="row">
+                       <div className="cinemarowtext">D</div>
+                       {this.renderSeats(18,this.state.data[18])}
+                       {this.renderSeats(19,this.state.data[19])}
+                       {this.renderSeats(20,this.state.data[20])}
 
-                           {this.renderSeats(21,this.state.data[21])}
-                           {this.renderSeats(22,this.state.data[22])}
-                           {this.renderSeats(23,this.state.data[23])}
-                      </div>
+                       {this.renderSeats(21,this.state.data[21])}
+                       {this.renderSeats(22,this.state.data[22])}
+                       {this.renderSeats(23,this.state.data[23])}
+                    </div>
                   </div>
+                  <div className="col-6">
+                    <div className="row">
+                        {this.renderSeats(24,this.state.data[24])}
+                        {this.renderSeats(25,this.state.data[25])}
+                        {this.renderSeats(26,this.state.data[26])}
 
+                         {this.renderSeats(27,this.state.data[27])}
+                         {this.renderSeats(28,this.state.data[28])}
+                         {this.renderSeats(29,this.state.data[29])}
+                         <div className="cinemarowtext">E</div>
+                   </div>
+                   <div className="row">
+                       {this.renderSeats(30,this.state.data[30])}
+                       {this.renderSeats(31,this.state.data[31])}
+                       {this.renderSeats(32,this.state.data[32])}
 
-          </div>
-          <div className="col-4 seatdiv">
-          <div className="row">
-              <div className="col-10">
-                    {this.renderSeats(24,this.state.data[24])}
-                    {this.renderSeats(25,this.state.data[25])}
-                    {this.renderSeats(26,this.state.data[26])}
+                       {this.renderSeats(33,this.state.data[33])}
+                       {this.renderSeats(34,this.state.data[34])}
+                       {this.renderSeats(35,this.state.data[35])}
+                       <div className="cinemarowtext">F</div>
+                    </div>
+                  <div className="row">
+                        {this.renderSeats(36,this.state.data[36])}
+                        {this.renderSeats(37,this.state.data[37])}
+                        {this.renderSeats(38,this.state.data[38])}
 
-                    {this.renderSeats(27,this.state.data[27])}
-                    {this.renderSeats(28,this.state.data[28])}
-                    {this.renderSeats(29,this.state.data[29])}
-                    <div className="square">E</div>
+                        {this.renderSeats(39,this.state.data[39])}
+                        {this.renderSeats(40,this.state.data[40])}
+                        {this.renderSeats(41,this.state.data[41])}
+                        <div className="cinemarowtext">G</div>
+                   </div>
+                   <div className="row">
+                       {this.renderSeats(42,this.state.data[42])}
+                       {this.renderSeats(43,this.state.data[43])}
+                       {this.renderSeats(44,this.state.data[44])}
 
-               </div>
-           </div>
-           <div className="row">
-               <div className="col-10">
-                     {this.renderSeats(30,this.state.data[30])}
-                     {this.renderSeats(31,this.state.data[31])}
-                     {this.renderSeats(32,this.state.data[32])}
-
-                     {this.renderSeats(33,this.state.data[33])}
-                     {this.renderSeats(34,this.state.data[34])}
-                     {this.renderSeats(35,this.state.data[35])}
-                     <div className="square">F</div>
-                </div>
-            </div>
-
-            <div className="row">
-                <div className="col-10">
-                    {this.renderSeats(36,this.state.data[36])}
-                    {this.renderSeats(37,this.state.data[37])}
-                    {this.renderSeats(38,this.state.data[38])}
-
-                    {this.renderSeats(39,this.state.data[39])}
-                    {this.renderSeats(40,this.state.data[40])}
-                    {this.renderSeats(41,this.state.data[41])}
-                    <div className="square">G</div>
-                 </div>
-             </div>
-
-             <div className="row">
-                 <div className="col-10">
-                     {this.renderSeats(42,this.state.data[42])}
-                     {this.renderSeats(43,this.state.data[43])}
-                     {this.renderSeats(44,this.state.data[44])}
-
-                     {this.renderSeats(45,this.state.data[45])}
-                     {this.renderSeats(46,this.state.data[46])}
-                     {this.renderSeats(47,this.state.data[47])}
-                      <div className="square">I</div>
+                       {this.renderSeats(45,this.state.data[45])}
+                       {this.renderSeats(46,this.state.data[46])}
+                       {this.renderSeats(47,this.state.data[47])}
+                       <div className="cinemarowtext">H</div>
+                    </div>
                   </div>
               </div>
-
           </div>
 
         </div>
-        <input type="submit" value="Book" className="btn btn-primary mL30" onClick={this.bookSeat} />
+        <div className="row">
+          <div className="col-4 offset-md-4">
+              <input type="submit" value="Book" className="btn btn-primary mL30" onClick={this.bookSeat} />
 
-        <p className="pmsg mL30">{this.state.message}</p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-4 offset-md-4">
+              <p className="pmsg">{this.state.message}</p>
+
+          </div>
+        </div>
 
       </div>
     );

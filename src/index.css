@@ -165,3 +165,17 @@ box-sizing: border-box;
     transition: all 0.5s ease-in-out;
     border-radius: 5px 5px 5px 5px;
 }
+.divcenter{
+  float: none;
+  margin : 0 auto;
+}
+.cinemarowtext{
+  width : 30px;
+  height : 30px;
+  margin: 5px;
+  position: relative;
+  display:inline-block;
+  top: 0px;
+  left: 0px;
+  border-radius: 5px;
+}
