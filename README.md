@@ -1,8 +1,24 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Implemented online movie booking system.
 
-## Available Scripts
+## Technology used
 
-In the project directory, you can run:
+React
+
+### Packages
+
+Bootstrap
+JWTDecode
+Jquery
+axios
+Routes
+
+* URL
+
+https://sarita2129.github.io/movie_booking_client/#/home
+
+Username : user1
+password : chicken
+
 
 ### `npm start`
 
