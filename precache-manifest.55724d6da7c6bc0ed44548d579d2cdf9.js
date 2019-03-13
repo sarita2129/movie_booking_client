@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/movie_booking_client/static/js/runtime~main.2482b572.js"
   },
   {
-    "revision": "ab6c22443f8ab857f150433fc3761951",
+    "revision": "f3cc197b079f57da13d0f1a865b7f9c8",
     "url": "/movie_booking_client/index.html"
   }
 ];
