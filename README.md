@@ -1,4 +1,17 @@
-Implemented online movie booking system.
+# Reelsplex - Online Movie Booking System
+Implemented client project for online movie booking system that consumes the services exposed by server application.
+User can login and register and book the shows for the shows one is interested.
+
+## Features
+* Login
+* Register
+* Filter movies based on location
+* Display shows for the movie for the selected location
+* booking
+
+## Server github url
+
+https://github.com/fahz1/Movie_booking_server
 
 ## Technology used
 
