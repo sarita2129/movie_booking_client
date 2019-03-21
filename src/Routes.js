@@ -12,7 +12,6 @@ import Login from './components/Login';
 import Slider from './components/Slider';
 import MovieInfo from './components/MovieInfo';
 import Cinema from './components/Cinema';
-import ControlledCarousel from './components/ControlledCarousel';
 
 
 
